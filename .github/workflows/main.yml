@@ -29,8 +29,8 @@ jobs:
         GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
         GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
         GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-      run: |
-        # 환경 변수가 코드에 제대로 전달되도록 설정
+      run: python monitor.py
+
         echo "API_KEY = \"${GNEWS_API_KEY}\"" >> monitor.py
         echo "GMAIL_ADDRESS = \"${GMAIL_ADDRESS}\"" >> monitor.py
         echo "GMAIL_APP_PASSWORD = \"${GMAIL_APP_PASSWORD}\"" >> monitor.py
