@@ -30,9 +30,3 @@ jobs:
         GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
         GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
       run: python monitor.py
-
-        echo "API_KEY = \"${GNEWS_API_KEY}\"" >> monitor.py
-        echo "GMAIL_ADDRESS = \"${GMAIL_ADDRESS}\"" >> monitor.py
-        echo "GMAIL_APP_PASSWORD = \"${GMAIL_APP_PASSWORD}\"" >> monitor.py
-        # 실제 파이썬 스크립트 실행
-        python monitor.py
