@@ -12,12 +12,10 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 
-# --- 2. 사용자 설정 (로컬 테스트용) ---
-# 이 부분은 4단계(최종 테스트)에서만 사용합니다.
-# GitHub에 올리기 전에는 이 값들을 지우거나 비워두는 것이 좋습니다.
-API_KEY = ""
-GMAIL_ADDRESS = ""
-GMAIL_APP_PASSWORD = ""
+# --- 2. 사용자 설정 (이 부분은 GitHub Secrets를 통해 자동으로 채워집니다) ---
+API_KEY = os.environ.get("GNEWS_API_KEY")
+GMAIL_ADDRESS = os.environ.get("GMAIL_ADDRESS")
+GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
 
 SEARCH_KEYWORDS = [
     "Lee Jae-yong", "Samsung Electronics",
